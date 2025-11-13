@@ -23,6 +23,17 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+    document.querySelectorAll('.progress-bar').forEach(bar => {
+    bar.addEventListener('input', function() {
+        // Обновить процент
+        this.previousElementSibling.querySelector('.progress-value').textContent = `${this.value}%`;
+        // Адаптивный цвет шкалы
+        this.style.background = `linear-gradient(90deg, rgb(102,61,173) ${this.value}%, #444 ${this.value}%)`;
+    });
+    // Первоначально установить цвет шкалы
+    bar.style.background = `linear-gradient(90deg, rgb(102,61,173) ${bar.value}%, #444 ${bar.value}%)`;
+});
+
     // FAQ функциональность
 function toggleFAQ(element) {
     const faqItem = element.parentElement;
@@ -76,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
 
     
     // Обработка кнопок "В корзину"
