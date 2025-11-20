@@ -19,7 +19,7 @@ body {
 
 /* Header стили */
 header {
-    background-color: rgb(56, 222, 241);
+    background-color: rgb(16, 92, 101);
     height: 100px;
     width: 90%;
     max-width: 1200px;
@@ -175,7 +175,7 @@ h3 {
 
 .btn-primary {
     background-color: white;
-    color: rgb(56, 222, 241);
+    color: rgb(22, 92, 99);
 }
 
 .btn-primary:hover {
